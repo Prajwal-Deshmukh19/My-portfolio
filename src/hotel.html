@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        #one {
+            margin-right: 1100px;
+            margin-top: 50px;
+        }
+        nav {
+            justify-content: center;
+        }
+    </style>
+    <script>
+        function Book() {
+            var txtdays = document.getElementById('txtdays').value;
+            var txtperson = document.getElementById('txtperson').value;
+
+            var luxuryroom = document.getElementById('luxuryroom');
+            var normalroom = document.getElementById('normalroom');
+
+            var RoomT = '';
+            var RoomC = 0;
+
+            if (luxuryroom.checked) {
+                RoomT = "Luxury Room";
+                RoomC = 5000;
+            } else if (normalroom.checked) {
+                RoomT = 'Normal Room';
+                RoomC = 2000;
+            }
+
+            var amentic = 0;
+            var Troom = "";
+            var acroom = document.getElementById('acroom').checked;
+            var nonacroom = document.getElementById('nonacroom').checked;
+
+            if (acroom) {
+                amentic += 1000;
+                Troom = "Ac Room";
+            } else {
+                Troom = "Non Ac Room";
+            }
+
+            document.getElementById('lblname').innerHTML = document.getElementById('txtname').value;
+            document.getElementById('lblphn').innerHTML = document.getElementById('txtphn').value;
+            document.getElementById('lbldate').innerHTML = txtdays;
+            document.getElementById('lblperson').innerHTML = txtperson;
+            document.getElementById('lblroom').innerHTML = RoomT;
+            document.getElementById('lblroomtype').innerHTML = Troom;
+            document.getElementById('lblroomcost').innerHTML = RoomC;
+            document.getElementById('lbladv').innerHTML = document.getElementById('advancepay').value;
+            var total = document.getElementById('total');
+
+            var days = parseInt(txtdays);
+            var advance = parseInt(document.getElementById('advancepay').value);
+             total.innerHTML= (RoomC + amentic) * days ;
+            var grandTotal = (RoomC + amentic) * days - advance;
+            document.getElementById('lblgrand').innerHTML = grandTotal;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h2 class="text-danger fw-bold text-center">Book Me Hotel</h2>
+    </header>
+    <main class="">
+        <nav class="nav nav-tabs">
+            <span><a href="#one" data-bs-toggle="tab" class="nav-link active">Customer Details</a></span>
+            <span><a href="#two" data-bs-toggle="tab" class="nav-link">Rooms</a></span>
+            <span><a href="#three" data-bs-toggle="tab" class="nav-link">Type of Room</a></span>
+            <span><a href="#four" data-bs-toggle="tab" class="nav-link">Advance Payment</a></span>
+        </nav>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="one">
+                <dl>
+                    <dt>Customer Name</dt>
+                    <dd><input type="text" id="txtname"></dd>
+                    <dt>Ph-No.</dt>
+                    <dd><input type="text" id="txtphn"></dd>
+                    <dt>No. of Days</dt>
+                    <dd><input type="number" id="txtdays"></dd>
+                    <dt>No. of Persons</dt>
+                    <dd><input type="text" id="txtperson"></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-pane" id="two">
+                <dl>
+                    <dt>Luxury Room</dt>
+                    <dd><input type="checkbox" class="form-check-input" id="luxuryroom" value="&#8377;5000"></dd>
+                    <dt>Normal Room</dt>
+                    <dd><input type="checkbox" class="form-check-input" id="normalroom" value="&#8377;2000"></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-pane" id="three">
+                <dl>
+                    <dt>Ac Room</dt>
+                    <dd><input type="checkbox" class="form-check-input" id="acroom"></dd>
+                    <dt>Non-Ac Room</dt>
+                    <dd><input type="checkbox" class="form-check-input" id="nonacroom"></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-pane" id="four">
+                <dl>
+                    <dt>Advance Payment</dt>
+                    <dd><input type="text" id="advancepay"></dd>
+                    <button class="btn btn-danger" onclick="Book()" data-bs-toggle="modal" data-bs-target="#bookmodal">Book</button>
+                </dl>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="modal fade" id="bookmodal">
+            <div class="modal-dialog">
+                <div class="modal-content p-1 m-1">
+                    <div class="modal-header">
+                        <h3>Booking Details</h3>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>Customer Name</dt>
+                            <dd><p id="lblname"></p></dd>
+                            <br>
+                            <dt>Phone Number</dt>
+                            <dd><p id="lblphn"></p></dd>
+                            <br>
+                            <dt>Date</dt>
+                            <dd><p id="lbldate"></p></dd>
+                            <br>
+                            <dt>No. of Persons</dt>
+                            <dd><p id="lblperson"></p></dd>
+                            <br>
+                            <dt>Room</dt>
+                            <dd><p id="lblroom"></p></dd>
+                            <br>
+                            <dt>Type of Room</dt>
+                            <dd><p id="lblroomtype"></p></dd>
+                            <br>
+                            <dt>Room Cost</dt>
+                            <dd><p id="lblroomcost"></p></dd>
+                            <br>
+                            <dt>Total</dt>
+                            <dd><p id="total"></p></dd><br>
+                            <dt>Advance Payment</dt>
+                            <dd><p id="lbladv"></p></dd>
+                            <br>
+                            <dt>Grand Total</dt>
+                            <dd><p id="lblgrand"></p></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
