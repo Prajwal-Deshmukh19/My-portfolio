@@ -12,7 +12,10 @@ font-size: 65px;
 margin-top: 30px;
 font-size: 42px;
 margin-left: 153px;
-font-family: sans-serif;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+#namecolor{
+  color: darkmagenta;
 }
 #fsd{
 margin-top: 50px;
@@ -448,7 +451,7 @@ footer{
     #pd{
       margin-top: 30px;
       font-size: 105px;
-      margin-left: 153px;
+      margin-left: 250px;
       font-family: sans-serif;
       }
       #fsd{
@@ -462,27 +465,29 @@ footer{
         #mailp{
           font-size: 45px;
           bottom: -30px;
-          right: 123px;
+          right: 3px;
         }
        
       #imgset{
         width: 550px;
         height: 500px;
+        margin-left: 35px;
       }
       #firsticons{
-        margin-left: 360px;
+        margin-left: 395px;
         font-size: 50px;
         margin-top: 50px;
     } 
     #hwrc{
      display: flex;
     justify-content: center;
-    font-size: 35px;
+    font-size: 50px;
     font-weight: bold;
     color: darkred;
     position: relative;
     top: 800px;
-    margin-right: 92px;
+    margin-right: 45px;
+    
     }
     #aboutme{
       text-align: center;
@@ -530,7 +535,7 @@ footer{
 #lastnav{
   display: flex;
   justify-content: space-evenly;
-  font-size: 30px;
+  font-size: 45px;
   margin-top: 50px;
   font-weight: bold;
 }
@@ -538,14 +543,14 @@ footer{
   display: flex;
   justify-content: space-evenly;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 45px;
   margin-top: 60px;
 }
 #copyright{
   text-align: center;
   font-weight: bold;
-  font-size: 30px;
-  margin-top:140px;
+  font-size: 33px;
+  margin-top:130px;
 
 }
 }

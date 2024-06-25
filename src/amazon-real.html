@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<style>
+header{
+    background-color: black; 
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+#sel{
+    margin-right: 30px;
+}
+.input-group{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+main {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            grid-gap: 10px;
+            margin-top: -250px;
+        }
+
+        .card {
+            border: 1px solid gray;
+
+        }
+
+        .card-title {
+            font-size: 25px;
+            font-weight: bold;
+            font-family: arial;
+            padding: 10px;
+
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 5px;
+
+
+        }
+
+        .card-footer {
+            color: blue;
+            height: 100px;
+          
+        }
+
+        .row img {
+            width: 100px;
+
+        }
+
+</style>
+</head>
+<body>
+    <header>
+        <div><img src="../public/images/amz-logo.png" width="150px" alt=""></div>
+        <div class="bi bi-geo-alt">Update location</div>
+        <div class="">
+            <input type="text" class="form-control" placeholder="Amazon" size="60">
+           
+        </div>
+        <div id="sel">
+            <select class="form-select">
+                <option>Select</option>
+                <option>English</option>
+                <option>Hindi</option>
+            </select>
+        </div>
+        <div class="bi bi-person-fill">Hello,signin</div>
+        <div>Return <span class="fw-bold">& Orders</span></div>
+        <div class="bi bi-cart"></div>
+    </header>
+    <section>
+        <div class="carousel slide carousel-dark" id="top" data-bs-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000ms">
+                <img src="../public/images/amz-banner-1.jpg" class="w-100 d-block" alt=""></div>
+                <div class="carousel-item" data-bs-interval="3000ms">
+                    <img src="../public/images/amz-banner-2.jpg" class="w-100 d-block" alt=""></div>
+                    <div class="carousel-item" data-bs-interval="5000ms">
+                        <img src="../public/images/amz-banner-3.jpg" class="w-100 d-block" alt=""></div>
+                    
+        </div>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#top" class="carousel-control-prev-icon"></button>
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#top" class="carousel-control-next-icon"></button>
+        </div>
+       
+    </section>
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <div class="card1-title">UP to 60% Off | Styles for men</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a5.jpg">
+                        <p>Diapers</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a6.jpg">
+                        <p>Baby-bath</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a7.jpg">
+                        <p>Soft-toys</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a8.jpg">
+                        <p>baby-scooters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-title">See all offers</div>
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card1-title">UP to 60% Off | Styles for men</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a1.jpg">
+                        <p>Clothing</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a2.jpg">
+                        <p>Footwear</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a3.jpg">
+                        <p>Watches</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a4.jpg">
+                        <p>Bags</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-title">See all offers</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card1-title">UP to 60% Off | Styles for men</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a9.jpg">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a10.jpg">
+                        <p>Refrigerator</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a11.jpg">
+                        <p>Microwaves</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a12.jpg">
+                        <p>Washing machines</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-title">See all offers</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card1-title">UP to 60% Off | Styles for men</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a13.jpg">
+                        <p> Women's Clothing</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a14.jpg">
+                        <p>Footwear+Handbags</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../public/images/a15.jpg">
+                        <p>Watches</p>
+                    </div>
+                    <div>
+                        <img src="../public/images/a16.jpg">
+                        <p>Fashion/jewllery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-title">See all offers</div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
